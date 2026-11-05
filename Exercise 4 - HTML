@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Exercise 4 - Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            max-width: 600px;
+        }
+        form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="date"], input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .radio-group {
+            margin-top: 5px;
+        }
+        .radio-group label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1 & 2. Main Registration Form (POST Method) -->
+    <h2>Registration Form</h2>
+    <form action="LECTURER_PROVIDED_URL" method="POST">
+        
+        <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Gender:</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="date_of_birth">Date of Birth:</label>
+            <input type="date" id="date_of_birth" name="date_of_birth" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <button type="submit">Submit Registration</button>
+    </form>
+
+    <!-- 3. Search Form on the Same Page (GET Method) -->
+    <h2>Search Form</h2>
+    <form action="LECTURER_PROVIDED_URL" method="GET">
+        <div class="form-group">
+            <label for="search_name">Search Name:</label>
+            <input type="text" id="search_name" name="search_name" placeholder="Enter name to search..." required>
+        </div>
+        <button type="submit">Search</button>
+    </form>
+
+</body>
+</html>
